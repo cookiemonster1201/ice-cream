@@ -1,0 +1,29 @@
+:root {
+  // COLOR
+  --primary-dark-color: #000000;
+  --primary-light-color: #ffffff;
+  --secondary-color: #907e82;
+  --accent-color: #d41443;
+  --secondary-accent-color: #ffa5ba;
+  // BG-COLOR
+  --bg-hero: #ffb8ca;
+  --bg-pink-theme: #fff5f6;
+  --bg-mobile-menu: #e17992;
+  // FONT
+  --main-font-family: 'DM Sans', sans-serif;
+  --title-font-family: 'Titan One', cursive;
+  // BUTTON
+  --button-hover-light: #ecebeb;
+  --button-hover: #c7133e;
+  // GEOMETRY
+  --mobile-width-container: 280px;
+  --tablet-width-container: 700px;
+  --desktop-width-container: 1050px;
+  // ANIMATION
+  --primary-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// MEDIA
+$mobile-media: 320px;
+$tablet-media: 768px;
+$desktop-media: 1280px;
