@@ -201,7 +201,7 @@ img {
     width: 33px;
     height: 50px;
     background-image: url(../images/advantages/icon-milk.png);
-    background-color: #fff;
+    background-color: #ffd9d9;
     background-size: contain;
   }
   .advantage-amount-two {
@@ -223,7 +223,7 @@ img {
     width: 50px;
     height: 50px;
     background-image: url(../images/advantages/icon-aplle.png);
-    background-color: #fff;
+    background-color: #ffd9d9;
     background-size: contain;
   }
   .advantage-amount-three {
@@ -245,7 +245,7 @@ img {
     width: 50px;
     height: 55px;
     background-image: url(../images/advantages/icon-heart.png);
-    background-color: #fff;
+    background-color: #ffd9d9;
     background-size: contain;
     background-repeat: no-repeat;
   }
