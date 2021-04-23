@@ -1,1 +1,36 @@
+.header {
+  padding-top: 37px;
+  padding-bottom: 37px;
+}
 
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.container-header {
+  display: flex;
+}
+
+.modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  min-width: 159px;
+  padding: 12px 37px;
+  border-radius: 22px;
+  color: var(--accent-color);
+  cursor: pointer;
+  border: none;
+  background-color: lightgrey;
+}
