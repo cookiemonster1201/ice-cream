@@ -166,7 +166,7 @@ img {
     margin: 0 auto;
   }
   .simple-advantage {
-    margin-bottom: 42px;
+    margin-bottom: 38px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -183,6 +183,7 @@ img {
     height: 156px;
   }
   .advantage-amount-one {
+    margin-bottom: 12px;
     font-family: Titan One;
     font-style: normal;
     font-weight: normal;
@@ -195,6 +196,7 @@ img {
   }
   .advantage-amount-one::before {
     content: '';
+    margin-bottom: 16px;
     display: block;
     width: 33px;
     height: 50px;
@@ -203,6 +205,7 @@ img {
     background-size: contain;
   }
   .advantage-amount-two {
+    margin-bottom: 12px;
     font-family: Titan One;
     font-style: normal;
     font-weight: normal;
@@ -215,6 +218,7 @@ img {
   }
   .advantage-amount-two::before {
     content: '';
+    margin-bottom: 16px;
     display: block;
     width: 50px;
     height: 50px;
@@ -223,6 +227,7 @@ img {
     background-size: contain;
   }
   .advantage-amount-three {
+    margin-bottom: 12px;
     font-family: Titan One;
     font-style: normal;
     font-weight: normal;
@@ -235,6 +240,7 @@ img {
   }
   .advantage-amount-three::before {
     content: '';
+    margin-bottom: 16px;
     display: block;
     width: 50px;
     height: 55px;
