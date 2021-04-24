@@ -1,4 +1,7 @@
 .header {
+  position: absolute;
+  width: 100vw;
+  //   background-color можна буде видалити при зшиванні проекту
   background-color: var(--bg-hero);
 }
 
@@ -89,7 +92,7 @@
 .mobile-menu__list {
   position: absolute;
   width: 100%;
-  transform: translateX(-21px) translateY(62px);
+  transform: translateX(-20px) translateY(62px);
 }
 
 .mobile-menu__item {
@@ -143,6 +146,12 @@
     cursor: pointer;
     border: none;
     background-color: var(--primary-light-color);
+    transition: background-color 250ms var(--primary-cubic);
+
+    &:hover,
+    &:focus {
+      background-color: var(--button-hover-light);
+    }
   }
 
   .mobile-menu {
@@ -210,26 +219,7 @@
   }
 
   .modal-btn {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-left: auto;
-    font-family: var(--main-font-family);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.31;
-    min-width: 159px;
-    padding: 12px 37px;
-    border-radius: 22px;
-    color: var(--accent-color);
-    cursor: pointer;
-    border: none;
-    background-color: var(--primary-light-color);
-    transition: background-color 250ms var(--primary-cubic);
-
-    &:hover,
-    &:focus {
-      background-color: var(--button-hover-light);
-    }
   }
 }
