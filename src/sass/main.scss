@@ -1,1 +1,26 @@
+// UTILS
+@import './utils/variables';
+@import './utils/visually-hidden';
+
+// BASE
+@import './base/base-reset';
+@import './base/container';
+
+// COMPONENTS
+@import './components/button';
+@import './components/suptitle';
+@import './components/title';
+@import './components/reviews-slider';
+@import './components/slick';
+
+// LAYOUT
+@import './layout/header';
+@import './layout/hero';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';
 
