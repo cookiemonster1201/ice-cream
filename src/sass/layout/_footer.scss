@@ -4,15 +4,73 @@
 
 .footer__text {
   font-family: var(--title-font-family);
-  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.16px;
   text-transform: uppercase;
   position: absolute;
-  
   color: var(--secondary-accent-color);
 }
+
+.footer__title {
+  font-family: var(--title-font-family);
+  font-size: 34px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.footer__soc-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--icon-color);
+  transition: var(--primary-cubic);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.footer__soc-svg {
+  fill: var(--primary-light-color);
+}
+
+.footer__contacts {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 186%;
+  letter-spacing: 0.02em;
+  color: var(--primary-dark-color);
+}
+
+.footer__tel {
+  color: var(--accent-color);
+}
+
+.footer__end {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 186%;
+  letter-spacing: 0.02em;
+  color: var(--secondary-color);
+}
+
 @media screen and (min-width: $mobile-media) {
     .container {
       width: var(--mobile-width-container);
