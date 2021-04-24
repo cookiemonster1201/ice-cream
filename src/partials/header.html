@@ -1,12 +1,12 @@
 <header class="header">
     <div class="container container-header">
         <nav class="navigation">
-            <a class="logo link" href="./index.html">
+            <a class="logo link anim-items" href="./index.html">
                 <img class="logo__img" src="./images/header_temp/logo_1.png" alt="logo">
             </a>
             <ul class="menu list">
                 <li class="menu__item">
-                    <a class="menu__link link" href="./index.html">Home</a>
+                    <a class="menu__link link current" href="./index.html">Home</a>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link link" href="#">About us</a>
@@ -22,6 +22,40 @@
                 </li>
             </ul>
         </nav>
+        <button type="button" class="menu-btn" data-menu-button>
+            <svg class="menu-btn__icon">
+                <use href="./images/header_temp/sprite.svg#icon-menu-burger"></use>
+            </svg>
+        </button>
+        <div class="mobile-menu" data-menu>
+            <button type="button" class="mobile-menu__close-btn" data-menu-close>
+                <svg class="menu__close-btn">
+                    <use href="./images/header_temp/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+            <button type="button" class="mobile__modal-btn">Buy now
+                <svg width="5" height="9" class="mobile__modal-btn-icon">
+                    <use href="./images/header_temp/sprite.svg#icon-arrow"></use>
+                </svg>
+            </button>
+            <ul class="mobile-menu__list list">
+                <li class="mobile-menu__item">
+                    <a href="./index.html" class="mobile-menu__link link current">Home</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#" class="mobile-menu__link link">About us</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="" class="mobile-menu__link link">How it’s made?</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="" class="mobile-menu__link link">Our products</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="" class="mobile-menu__link link">Contact</a>
+                </li>
+            </ul>
+        </div>
         <button class="modal-btn" type="button">Buy now
             <svg width="5" height="9" class="modal-btn__icon">
                 <use href="./images/header_temp/sprite.svg#icon-arrow"></use>
