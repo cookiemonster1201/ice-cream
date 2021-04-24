@@ -1,0 +1,32 @@
+.footer {
+  background-color: var(--bg-pink-theme);
+}
+
+.footer__text {
+  font-family: var(--title-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.16px;
+  text-transform: uppercase;
+  position: absolute;
+  
+  color: var(--secondary-accent-color);
+}
+@media screen and (min-width: $mobile-media) {
+    .container {
+      width: var(--mobile-width-container);
+    }
+}
+  
+@media screen and (min-width: $tablet-media) {
+    .container {
+      width: var(--tablet-width-container);
+    }
+}
+  
+@media screen and (min-width: $desktop-media) {
+    .container {
+      width: var(--desktop-width-container);
+    }
+}
