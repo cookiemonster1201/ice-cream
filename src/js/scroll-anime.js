@@ -22,9 +22,9 @@ if (animItems.length > 0) {
         animItem.classList.add('on-screen');
       }
       // Условие else что бы анимация была и при обратном скролле
-      // else {
-      //   animItem.classList.remove('on-screen');
-      // }
+      else {
+        animItem.classList.remove('on-screen');
+      }
     }
   }
 
