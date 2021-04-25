@@ -1,12 +1,14 @@
 .button-link {
-  display: inline-block;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
   border-radius: 20px;
 
   font-family: (--main-font-family);
   font-size: 14px;
   line-height: 1.28;
+
+  transition: background-color 250ms var(--primary-cubic);
 
   &--purple {
     padding-left: 24px;
@@ -14,6 +16,11 @@
     background-color: var(--accent-color);
 
     color: var(--primary-light-color);
+
+    &:hover,
+    &:focus {
+      background-color: var(--button-hover);
+    }
   }
 
   &--light {
@@ -22,5 +29,101 @@
     background-color: var(--primary-light-color);
 
     color: var(--accent-color);
+
+    &:hover,
+    &:focus {
+      background-color: var(--button-hover-light);
+    }
+  }
+}
+
+.modal-button {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  border: none;
+  border-radius: 22px;
+  padding-left: 37px;
+  padding-right: 37px;
+
+  font-family: (--main-font-family);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  transition: background-color 250ms var(--primary-cubic);
+
+  &--light {
+    background-color: var(--primary-light-color);
+    color: var(--accent-color);
+
+    .modal-button__icon {
+      stroke: currentColor;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--button-hover-light);
+    }
+  }
+
+  &--purple {
+    background-color: var(--accent-color);
+    color: var(--primary-light-color);
+
+    .modal-button__icon {
+      stroke: currentColor;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--button-hover);
+    }
+  }
+}
+
+.modal-button__text {
+  margin-right: 13px;
+}
+
+.button-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--primary-light-color);
+
+  transition: background-color 250ms var(--primary-cubic);
+
+  &--small {
+    width: 26px;
+    height: 26px;
+  }
+
+  &--big {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+
+    .button-circle__icon {
+      fill: var(--primary-light-color);
+    }
+  }
+}
+
+.button-circle__icon {
+  fill: var(--accent-color);
+  transition: fill 250ms var(--primary-cubic);
+}
+
+@media screen and (min-width: $desktop-media) {
+  .button-link {
+    height: 44px;
   }
 }
