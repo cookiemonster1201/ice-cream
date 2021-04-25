@@ -339,18 +339,25 @@
   }
 
   @media screen and (min-width: $desktop-media) {
-    margin-bottom: 70px;
+    margin-bottom: 32px;
     font-size: 30px;
     line-height: 1.13;
   }
 }
 
 .product__name::after {
-  content: "...";
+  content: "";
   display: block;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+  width: 26px;
+  height: 6px;
+  background-image: url("/images/icon/dots-icon.svg");
+
+  @media screen and (min-width: $desktop-media) {
+    margin-top: 32px;
+  }
 }
 
 .product__description {
@@ -437,3 +444,6 @@
   }
 }
 
+.product__button-circle {
+  margin: 0 auto;
+}
