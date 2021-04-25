@@ -6,8 +6,9 @@
   width: 95%;
   height: 100vh;
   max-height: 581px;
+  border-radius: 10px;
   background-color: var(--bg-pink-theme);
-  padding: 40px;
+  padding: 55px 40px;
   transition: transform 250ms var(--primary-cubic);
 
   background-image: url('../images/header/bg-milk-mob_1x.png');
@@ -75,6 +76,7 @@
   .modal {
     width: 528px;
     height: 581px;
+    padding: 65px 40px;
 
     .backdrop.is-hidden & {
       transform: translate(200%, -50%) rotate(180deg) scale(0);
