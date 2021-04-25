@@ -1,12 +1,18 @@
-  <section class="about container section">
+<section class="about section">
+  <div class="container">
     <p class="suptitle about__suptitle">tradition and love</p>
     <h2 class="title about__title">how it’s made?</h2>
-
     <div class="about__wrapper">
       <div class="about__left-side">
-        <img class="about__img" src="" alt="cow and milk">
+        <picture>
+          <source srcset="./images/about/desktop/desktop-cow.png 1x, ./images/about/desktop/desktop-cow@2x.png 2x"
+            media="(min-width: 1200px)">
+          <source srcset="./images/about/tablet/tablet-cow.png 1x, ./images/about/tablet/tablet-cow@2x.png 2x"
+            media="(min-width: 768px)">
+          <source srcset="./images/about/mobile/mobile-cow.png 1x, ./images/about/mobile/mobile-cow@2x.png 2x">
+          <img class="about__img" src="./images/about/desktop/desktop-cow.png" alt="cow and milk">
+        </picture>
       </div>
-
       <div class="about__right-side">
         <div class="about__wrapper-text">
           <p class="about__text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
@@ -20,19 +26,13 @@
             </span>
           </p>
         </div>
-
-        <button class="about__btn" type="button">
+        <button data-modal-open class="about__btn modal-button modal-button--light" type="button">
           Read more
-          <svg class="about__icon">
-            <use href=""></use>
+          <svg class="about__icon modal-button__icon modal-button__icon--purple" width="5px" height="9px">
+            <use class="test" href="./images/icon/sprite.svg#icon-btn-arrow"></use>
           </svg>
         </button>
-
-        
       </div>
     </div>
-  </section>
-  
-</body>
-
-</html>
+  </div>
+</section>

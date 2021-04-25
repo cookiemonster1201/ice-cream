@@ -2,12 +2,12 @@
   padding-top: 63px;
   padding-bottom: 20px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-media) {
     padding-top: 65px;
     padding-bottom: 33px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $desktop-media) {
     padding-top: 63px;
     padding-bottom: 73px;
   }
@@ -29,7 +29,7 @@
   @media screen and (min-width: $desktop-media) {
     background-image: url('../images/about/desktop/desktop-bg-about.png');
     background-repeat: no-repeat;
-    background-position-y: 130%;
+    background-position-y: 150%;
     background-size: contain;
   }
 }
@@ -39,7 +39,7 @@
 }
 
 .about__wrapper {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-media) {
     display: flex;
     justify-content: center;
   }
@@ -48,12 +48,12 @@
 .about__left-side {
   margin-top: 26px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-media) {
     margin-right: 17px;
     margin-top: 50px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-media) {
     margin-right: 74px;
     margin-top: 55px;
   }
@@ -64,12 +64,12 @@
   margin-bottom: 46px;
   width: 280px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-media) {
     width: 340px;
     margin-bottom: 0;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-media) {
     width: 516px;
   }
 }
@@ -79,13 +79,11 @@
   flex-direction: column;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
-    display: flex;
+  @media screen and (min-width: $tablet-media) {
     margin-top: 100px;
   }
 
-  @media screen and (min-width: 1200px) {
-    display: flex;
+  @media screen and (min-width: $desktop-media) {
     margin-top: 106px;
   }
 }
@@ -99,14 +97,14 @@
 
   color: var(--primary-dark-color);
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-media) {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.76;
     max-width: 340px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-media) {
     font-size: 16px;
     letter-spacing: 0.04em;
     max-width: 463px;
@@ -117,7 +115,7 @@
   color: var(--secondary-color);
   margin-top: 32px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-media) {
     font-size: 14px;
     line-height: 1.94;
     margin-top: 35px;
@@ -130,37 +128,34 @@
 }
 
 .about__btn {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.3;
-  min-width: 176px;
-  border-radius: 22px;
-  padding: 18px 37px;
-  border-color: transparent;
-  background-color: var(--primary-light-color);
-  color: var(--accent-color);
-  margin-top: 17px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 
   &:hover,
   &:focus {
     background-color: var(--button-hover-light);
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 767px) {
+    margin: 0 auto;
+    margin-top: 17px;
+  }
+
+  @media screen and (min-width: $tablet-media) {
     font-size: 16px;
     margin-top: 62px;
     display: flex;
     justify-content: start;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-media) {
     margin-top: 45px;
   }
 }
 
 .about__icon {
-  width: 4.4px;
-  height: 8px;
   margin-left: 14px;
-  fill: var(--accent-color);
 }
