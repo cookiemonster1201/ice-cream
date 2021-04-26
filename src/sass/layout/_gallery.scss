@@ -32,7 +32,6 @@
   &:nth-child(3) {
     margin-top: -145px;
   }
-
   &:nth-child(5) {
     margin-top: -145px;
   }
@@ -43,7 +42,6 @@
     &:nth-child(5) {
       margin-top: unset;
     }
-
     &:not(:last-child) {
       margin-right: 6px;
     }
@@ -69,7 +67,6 @@
     }
   }
 }
-
 .gallery-thumb {
   margin-bottom: 6px;
   border-radius: 10px;
