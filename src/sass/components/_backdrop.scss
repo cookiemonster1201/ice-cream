@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 200;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--backdrop-overlay);
 
   opacity: 1;
   transition: visibility 250ms var(--primary-cubic), opacity 250ms var(--primary-cubic),
