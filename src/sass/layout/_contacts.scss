@@ -5,7 +5,6 @@
   .contacts {
     padding-top: 43px;
     padding-bottom: 105px;
-    // background: var(--bg-pink-theme);
     background: linear-gradient(
       to bottom,
       var(--primary-light-color) 9%,
@@ -82,12 +81,14 @@
       color: var(--secondary-accent-color);
     }
   }
-  .contacts-link-list__link {
-    display: block;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.5;
-    color: var(--secondary-color);
+  .contacts-link-list{
+    &__link {
+      display: block;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--secondary-color);
+    }
   }
   .contacts-btn-list {
     display: flex;
@@ -95,21 +96,6 @@
     justify-content: center;
     &__item:not(:last-child) {
       margin-bottom: 10px;
-    }
-  }
-  .button-link {
-    font-size: 16px;
-    line-height: 1.31;
-    transition: color 250ms var(--primary-cubic);
-
-    &--purple:hover,
-    &--purple:focus {
-      background: var(--button-hover);
-    }
-
-    &--light:hover,
-    &--light:focus {
-      background-color: var(--button-hover-light);
     }
   }
 }
@@ -134,6 +120,7 @@
     margin-left: -20px;
     margin-bottom: 81px;
     &__item {
+      padding: 50px 30px;
       flex-basis: calc(100% / 3 - 20px);
       margin-bottom: 20px;
       margin-left: 20px;
@@ -158,10 +145,19 @@
       line-height: 1.86;
     }
   }
-  .contacts-link-list__link {
+  .contacts-link-list {
+    &__link {
     font-size: 14px;
     line-height: 1.86;
+    }
   }
+  .contacts-btn-list {
+    display: flex;
+    justify-content: center;
+    &__item:not(:last-child) {
+      margin-right: 10px;
+    }
+  } 
 }
 
 @media screen and (min-width: $desktop-media) {
@@ -179,6 +175,7 @@
   .contacts-list {
     margin-bottom: 86px;
     &__item {
+      padding: 50px 45px;
       flex-basis: calc(100% / 3 - 20px);
       width: 330px;
     }
@@ -202,8 +199,17 @@
       line-height: 1.88;
     }
   }
-  .contacts-link-list__link {
-    font-size: 16px;
-    line-height: 1.81;
+  .contacts-link-list {
+    &__link {
+      font-size: 16px;
+      line-height: 1.81;
+    }
   }
+  .contacts-btn-list {
+    display: flex;
+    justify-content: center;
+    &__item:not(:last-child) {
+      margin-right: 15px;
+    }
+  } 
 }
