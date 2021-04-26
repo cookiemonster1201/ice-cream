@@ -1,0 +1,453 @@
+.products {
+  padding-top: 122px;
+  padding-bottom: 98px;
+  background-color: var(--primary-light-color);
+
+  @media screen and (min-width: $tablet-media) {
+    padding-bottom: 112px;
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    padding-top: 128px;
+    padding-bottom: 118px;
+  }
+}
+
+.products__title-label {
+  margin-bottom: 16px;
+  font-family: var(--title-font-family);
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--secondary-accent-color);
+
+  @media screen and (max-width: 319px) {
+    font-size: 6vw;
+  }
+
+  @media screen and (min-width: $tablet-media) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+  }
+}
+
+.products__title {
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media screen and (max-width: 319px) {
+    font-size: 11vw;
+  }
+
+  @media screen and (min-width: $tablet-media) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    margin-bottom: 50px;
+  }
+}
+
+.products__list {
+  perspective: 2000px;
+
+  @media screen and (min-width: $tablet-media) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: -20px;
+    margin-right: -20px;
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    margin-bottom: -24px;
+    margin-right: -24px;
+  }
+}
+
+.products__item {
+  padding-top: 114px;
+
+  @media screen and (min-width: $tablet-media) {
+    padding-top: 110px;
+    flex-basis: calc(100% / 3 - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+@media screen and (min-width: $desktop-media) {
+    padding-top: 210px;
+    flex-basis: calc(100% / 3 - 24px);
+    margin-right: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+.products__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 18px;
+  }
+}
+
+@keyframes cardFlipForth {
+  0% {
+    transform: scale(1) rotateY(0);
+  }
+
+  50% {
+    transform: scale(1.3) rotateY(90deg);
+  }
+  100% {
+    transform: scale(1) rotateY(180deg);
+  }
+}
+  
+@keyframes cardFlipBack {
+  0% {
+    transform: scale(1) rotateY(180deg);
+  }
+
+  50% {
+    transform: scale(1.3) rotateY(90deg);
+  }
+  100% {
+    transform: scale(1) rotateY(0deg);
+  }
+}
+  
+.product {
+  position: relative;
+  transform-style: preserve-3d;
+  min-height: 486px;
+  width: 100%;
+
+  @media screen and (min-width: $desktop-media) {
+    min-height: 525px;
+  }
+}
+
+.product::before {
+  position: absolute;  
+  z-index: 2;
+  top: -114px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  display: block;
+  height: 252px;
+  backface-visibility: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 767px) {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $tablet-media) {
+    top: -102px;
+    width: 220px;
+    height: 224px;
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    top: -210px;
+    width: 336px;
+    height: 336px;
+  }
+}
+
+.product--theme-one::before {
+  background-image: url("/images/products/mobile/mobile-product-1.png");
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url("/images/products/mobile/mobile-product-1@2x.png");
+    }
+
+
+  @media screen and (min-width: $tablet-media) {
+    background-image: url("/images/products/tablet/tablet-product-1.png");
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url("/images/products/tablet/tablet-product-1@2x.png");
+      }
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    background-image: url("/images/products/desktop/desktop-product-1.png");
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url("/images/products/desktop/desktop-product-1@2x.png");
+      }
+  }
+}
+
+
+.product--theme-two::before {
+  background-image: url("/images/products/mobile/mobile-product-2.png");
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url("/images/products/mobile/mobile-product-2@2x.png");
+    }
+
+  @media screen and (min-width: $tablet-media) {
+    background-image: url("/images/products/tablet/tablet-product-2.png");
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url("/images/products/tablet/tablet-product-2@2x.png");
+      }
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    background-image: url("/images/products/desktop/desktop-product-2.png");
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url("/images/products/desktop/desktop-product-2@2x.png");
+      }
+  }
+}
+
+.product--theme-three::before {
+  background-image: url("/images/products/mobile/mobile-product-3.png");
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url("/images/products/mobile/mobile-product-3@2x.png");
+    }
+
+
+  @media screen and (min-width: $tablet-media) {
+    background-image: url("/images/products/tablet/tablet-product-3.png");
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url("/images/products/tablet/tablet-product-3@2x.png");
+      }
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    background-image: url("/images/products/desktop/desktop-product-3.png");
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url("/images/products/desktop/desktop-product-3@2x.png");
+      }
+  }
+}
+
+.card-face {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.product__front-side {
+  padding: 160px 40px 40px;
+  padding-top: 160px;
+  background-color: var(--bg-hero);
+
+  &--theme-two{
+    background-color: #F0D1A5;;
+  }
+
+  &--theme-three {
+    background-color: #C2E297;
+  }
+
+  @media screen and (min-width: $tablet-media) {
+    padding: 152px 11px 40px;
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    padding: 164px 44px 50px;
+  }
+}
+
+.product__back-side {
+  padding: 40px;
+  transform: rotateY(180deg);
+  background-color: var(--primary-light-color);
+  box-shadow: -15px -15px 152px -52px rgb(235, 108, 137) inset;
+
+  &--theme-two{
+    box-shadow: -15px -15px 152px -52px rgb(196, 117, 6) inset;
+  }
+
+  &--theme-three {
+    box-shadow: -15px -15px 152px -52px rgb(128, 170, 73) inset;
+  }
+
+  @media screen and (min-width: $tablet-media) {
+    padding: 40px 20px;
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    padding: 50px 44px;
+  }
+}
+
+.flipped-forth {
+  animation-name: cardFlipForth;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.flipped-backwards {
+  animation-name: cardFlipBack;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.product__name {
+  margin-bottom: 30px;
+  font-family: var(--title-font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary-light-color);
+
+  @media screen and (max-width: 319px) {
+    font-size: 6vw;
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    margin-bottom: 32px;
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.product__name::after {
+  content: "";
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 26px;
+  height: 6px;
+  background-image: url("/images/icon/dots-icon.svg");
+
+  @media screen and (min-width: $desktop-media) {
+    margin-top: 32px;
+  }
+}
+
+.product__description {
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--primary-light-color);
+
+  @media screen and (max-width: 319px) {
+    font-size: 5vw;
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+.arrow-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: var(--primary-light-color);
+  background-image: url("/images/icon/sprite.svg#icon-arrow-right");
+}
+
+.arrow-button__icon {
+  fill: var(--accent-color)
+}
+
+.product__details {
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--accent-color);
+
+  &--theme-two {
+      color: #82643c;
+  }
+
+  &--theme-three {
+    color: #638239;
+  }
+
+  @media screen and (max-width: 319px) {
+    font-size: 5vw;
+  }
+
+  @media screen and (min-width: $desktop-media) {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+@-webkit-keyframes pulse{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}50%{-webkit-transform:scale3d(1.05,1.05,1.05);transform:scale3d(1.05,1.05,1.05)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}@keyframes pulse{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}50%{-webkit-transform:scale3d(1.05,1.05,1.05);transform:scale3d(1.05,1.05,1.05)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}.animate__pulse{-webkit-animation-name:pulse;animation-name:pulse;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}
+
+.products__item.on-screen {
+  animation-name: pulse;
+  animation-duration: 800ms;
+}
+
+.products__item--delayed.on-screen {
+  @media screen and (min-width: $tablet-media) {
+      animation-delay: 200ms;
+  }
+}
+
+.products__item--delayed-further.on-screen {
+  @media screen and (min-width: $tablet-media) {
+    animation-delay: 400ms;
+  }
+}
+
+.product__button-circle {
+  margin: 0 auto;
+}
+
+.products__button-icon {
+  transform: rotate(180deg);
+}

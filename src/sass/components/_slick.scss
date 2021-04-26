@@ -1,0 +1,64 @@
+.reviews-slider .slick-track {
+  display: flex;
+}
+
+.reviews-slider .slick-list {
+  overflow: hidden;
+}
+
+.reviews-slider .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  list-style: none;
+}
+
+.reviews-slider .slick-dots li {
+  &:not(:last-child) {
+    margin-right: 18px;
+  }
+}
+
+.reviews-slider .slick-dots li button {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+
+  font-size: 0;
+
+  transition: background-color 250ms linear;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-image: url('../images/customer-reviews/slider-active.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+
+    transform: translate(-50%, -50%);
+    transition: opacity 250ms linear;
+  }
+}
+
+.reviews-slider .slick-dots .slick-active button {
+  background-color: transparent;
+
+  &::before {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-slider .slick-dots {
+    margin-top: 35px;
+  }
+}

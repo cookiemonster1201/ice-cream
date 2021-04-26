@@ -1,0 +1,225 @@
+body {
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+.location-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 30px 15px;
+  background-color: var(--backdrop-overlay);
+
+  overflow-y: scroll;
+  opacity: 1;
+  transition: opacity 250ms var(--primary-cubic);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+.location-modal {
+  position: relative;
+  width: 100%;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  border-radius: 10px;
+  background-color: var(--bg-pink-theme);
+
+  transform: translate(0, 0) rotate(360deg) scale(1);
+  transition: transform 500ms var(--primary-cubic);
+
+  .location-backdrop.is-hidden & {
+    transform: translate(200%, -50%) rotate(180deg) scale(0);
+    transition: transform 250ms var(--primary-cubic);
+  }
+}
+
+.location-modal__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--bg-pink-theme);
+
+  cursor: pointer;
+  transition: background-color 250ms linear, border-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    border-color: var(--primary-light-color);
+  }
+}
+
+.location-modal__close-icon {
+  fill: var(--secondary-color);
+
+  transition: fill 250ms var(--primary-cubic);
+
+  .location-modal__close:hover,
+  .location-modal__close:focus {
+    fill: var(--primary-light-color);
+  }
+}
+
+.location-modal__title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
+
+.tab-list {
+  display: flex;
+  width: 100%;
+  background-color: var(--button-hover-light);
+}
+
+.tab-list__item {
+  width: calc(100% / 3);
+}
+
+.tab-list__button {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: none;
+  border-radius: 12px 12px 0 0;
+  background-color: var(--button-hover-light);
+
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 3.125vw;
+  text-align: center;
+  color: var(--primary-dark-color);
+
+  cursor: pointer;
+  transition: color 250ms var(--primary-cubic), background-color 250ms var(--primary-cubic);
+
+  &.active {
+    background-color: var(--accent-color);
+    color: var(--primary-light-color);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-light-color);
+  }
+}
+
+.tabs-content {
+  position: relative;
+  height: 488px;
+}
+
+.tabs-content__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 10px;
+
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 300ms var(--primary-cubic);
+
+  &.active {
+    pointer-events: unset;
+    visibility: unset;
+    opacity: 1;
+  }
+}
+
+.tabs-content__wrapper {
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  background-color: var(--bg-pink-theme);
+}
+
+.tabs-content__map {
+  width: 100%;
+  height: 280px;
+}
+
+.tabs-content__heading {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  border-radius: 6px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary-light-color);
+
+  &--beige {
+    background-color: #f0d1a5;
+  }
+
+  &--green {
+    background-color: #c2e297;
+  }
+}
+
+.data-list__item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  color: var(--primary-dark-color);
+}
+
+.data-list__time {
+  display: block;
+  color: var(--secondary-accent-color);
+}
+
+@media screen and (min-width: 375px) {
+  .location-modal {
+    left: 50%;
+    width: 345px;
+
+    transform: translateX(-50%);
+  }
+
+  .tab-list__button {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 767px) and (min-height: 720px) {
+  .location-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .location-modal {
+    width: 700px;
+  }
+}

@@ -1,0 +1,215 @@
+@media screen and (min-width: $mobile-media) {
+  .container {
+    width: var(--mobile-width-container);
+  }
+  .contacts {
+    padding-top: 43px;
+    padding-bottom: 105px;
+    background: linear-gradient(
+      to bottom,
+      var(--primary-light-color) 9%,
+      var(--bg-pink-theme) 9% 100%
+    );
+  }
+
+  .contacts-list {
+    margin-bottom: 62px;
+    &__item {
+      padding: 43px 20px;
+      background: var(--primary-light-color);
+      box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+      border-radius: 24px;
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &__place {
+      display: inline-block;
+      margin-bottom: 25px;
+      padding-left: 28px;
+      padding-right: 28px;
+      background: #f0d1a5;
+      border-radius: 4px;
+      font-family: var(--main-font-family);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.83;
+      letter-spacing: 0.04em;
+      color: var(--primary-light-color);
+      &--truck {
+        background: #c2e297;
+      }
+    }
+    &__city {
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.83;
+      letter-spacing: 0.04em;
+      color: var(--primary-dark-color);
+    }
+    &__description {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #907e82;
+
+      content: '';
+      width: 100%;
+      border-bottom: 1px solid #e1e1e1;
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+    }
+  }
+  .contacts-schedule-list {
+    content: '';
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    &__schedule-day {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--primary-dark-color);
+    }
+    &__schedule-hour {
+      display: block;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.83;
+      color: var(--secondary-accent-color);
+    }
+  }
+  .contacts-link-list{
+    &__link {
+      display: block;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--secondary-color);
+    }
+  }
+  .contacts-btn-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-media) {
+  .container {
+    width: var(--tablet-width-container);
+  }
+  .contacts {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    background: linear-gradient(
+      to bottom,
+      var(--primary-light-color) 18%,
+      var(--bg-pink-theme) 18% 100%
+    );
+  }
+  .contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -20px;
+    margin-left: -20px;
+    margin-bottom: 81px;
+    &__item {
+      padding: 50px 30px;
+      flex-basis: calc(100% / 3 - 20px);
+      margin-bottom: 20px;
+      margin-left: 20px;
+    }
+    &__place {
+      font-size: 16px;
+      line-height: 1.88;
+    }
+    &__city {
+      font-size: 14px;
+      line-height: 1.88;
+    }
+    &__description {
+      font-size: 14px;
+      line-height: 1.64;
+    }
+  }
+  .contacts-schedule-list {
+    &__schedule-day,
+    &__schedule-hour {
+      font-size: 14px;
+      line-height: 1.86;
+    }
+  }
+  .contacts-link-list {
+    &__link {
+    font-size: 14px;
+    line-height: 1.86;
+    }
+  }
+  .contacts-btn-list {
+    display: flex;
+    justify-content: center;
+    &__item:not(:last-child) {
+      margin-right: 10px;
+    }
+  } 
+}
+
+@media screen and (min-width: $desktop-media) {
+  .container {
+    width: var(--desktop-width-container);
+  }
+  .contacts {
+    padding-top: 66px;
+    background: linear-gradient(
+      to bottom,
+      var(--primary-light-color) 20%,
+      var(--bg-pink-theme) 20% 100%
+    );
+  }
+  .contacts-list {
+    margin-bottom: 86px;
+    &__item {
+      padding: 50px 45px;
+      flex-basis: calc(100% / 3 - 20px);
+      width: 330px;
+    }
+    &__place {
+      font-size: 16px;
+      line-height: 1.88;
+    }
+    &__city {
+      font-size: 16px;
+      line-height: 1.88;
+    }
+    &__description {
+      font-size: 16px;
+      line-height: 1.81;
+    }
+  }
+  .contacts-schedule-list {
+    &__schedule-day,
+    &__schedule-hour {
+      font-size: 16px;
+      line-height: 1.88;
+    }
+  }
+  .contacts-link-list {
+    &__link {
+      font-size: 16px;
+      line-height: 1.81;
+    }
+  }
+  .contacts-btn-list {
+    display: flex;
+    justify-content: center;
+    &__item:not(:last-child) {
+      margin-right: 15px;
+    }
+  } 
+}

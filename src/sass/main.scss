@@ -1,7 +1,30 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+// UTILS
+@import './utils/variables';
+@import './utils/visually-hidden';
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+// BASE
+@import './base/base-reset';
+@import './base/container';
+
+// COMPONENTS
+@import './components/button';
+@import './components/suptitle';
+@import './components/title';
+@import './components/about-modal';
+@import './components/reviews-slider';
+@import './components/slick';
+@import './components/modal';
+@import './components/modal-form';
+@import './components/backdrop';
+@import './components/location-modal';
+
+// LAYOUT
+@import './layout/header';
+@import './layout/hero';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';

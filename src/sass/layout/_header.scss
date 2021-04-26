@@ -1,0 +1,226 @@
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  //   background-color можна буде видалити при зшиванні проекту
+  background: transparent;
+}
+
+.menu {
+  display: none;
+}
+
+.mobile-menu__link.current {
+  color: var(--accent-color);
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 6px;
+  padding-bottom: 27px;
+}
+
+.menu-btn {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.menu-btn__icon {
+  width: 20px;
+  height: 12px;
+  fill: var(--accent-color);
+}
+
+.mobile-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  max-width: 250px;
+  width: 100vw;
+  height: 100vh;
+  padding: 60px 20px 0 21px;
+  z-index: 2;
+  background-color: var(--bg-mobile-menu);
+
+  transform: translateX(100%) scale(0.2);
+  transition: transform 250ms var(--primary-cubic), scale 250ms var(--primary-cubic);
+}
+
+.is-open {
+  transform: translateX(0%) scale(1);
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 23px;
+  right: 28px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.menu__close-btn {
+  width: 14px;
+  height: 14px;
+}
+
+.mobile__modal-btn {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  padding: 11px 49px;
+  border-radius: 22px;
+  color: var(--accent-color);
+  margin-bottom: 19px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--primary-light-color);
+}
+
+.mobile__modal-btn-icon {
+  margin-left: 20px;
+}
+
+.mobile-menu__list {
+  position: absolute;
+  width: 100%;
+  transform: translateX(-20px) translateY(62px);
+}
+
+.mobile-menu__item {
+  padding-left: 21px;
+  padding-top: 11px;
+  padding-bottom: 13px;
+  border-top: 1px solid #e18298;
+
+  &:last-child {
+    border-bottom: 1px solid #e18298;
+  }
+}
+
+.mobile-menu__link {
+  position: relative;
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--primary-light-color);
+}
+
+@media screen and (max-width: $tablet-media) {
+  .modal-btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $tablet-media) {
+  .container-header {
+    padding-top: 37px;
+  }
+
+  .menu-btn {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+
+  .modal-btn {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    font-family: var(--main-font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    min-width: 160px;
+    padding: 12px 37px;
+    border-radius: 22px;
+    color: var(--accent-color);
+    cursor: pointer;
+    border: none;
+    background-color: var(--primary-light-color);
+    transition: background-color 250ms var(--primary-cubic);
+
+    &:hover,
+    &:focus {
+      background-color: var(--button-hover-light);
+    }
+  }
+
+  .mobile-menu {
+    padding: 60px 34px;
+    max-width: 254px;
+  }
+
+  .mobile__modal-btn {
+    padding: 11px 43px;
+  }
+
+  .mobile-menu__list {
+    transform: translateX(-33px) translateY(62px);
+  }
+
+  .mobile-menu__item {
+    padding-left: 33px;
+  }
+}
+
+@media screen and (min-width: $desktop-media) {
+  .menu-btn {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    position: absolute;
+    transform: translateX(-70px);
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    padding-left: 240px;
+  }
+
+  .menu__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  .menu__link {
+    position: relative;
+    font-family: var(--main-font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    color: var(--primary-light-color);
+    padding-top: 50px;
+    padding-bottom: 37px;
+    transition: color 250ms var(--primary-cubic);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+
+    &.current {
+      color: var(--accent-color);
+    }
+  }
+
+  .modal-btn {
+    align-items: center;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,18 @@
+.customer-reviews {
+  padding-top: 40px;
+  padding-bottom: 43px;
+}
+
+@media screen and (min-width: $tablet-media) {
+  .customer-reviews {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: $desktop-media) {
+  .customer-reviews {
+    padding-top: 62px;
+    padding-bottom: 66px;
+  }
+}
