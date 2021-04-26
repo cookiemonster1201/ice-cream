@@ -1,8 +1,9 @@
 .header {
   position: absolute;
-  width: 100vw;
+  width: 100%;
+  z-index: 100;
   //   background-color можна буде видалити при зшиванні проекту
-  background-color: var(--bg-hero);
+  background: transparent;
 }
 
 .menu {

@@ -9,6 +9,7 @@
   font-size: 8px;
   line-height: 1.25;
 
+  cursor: pointer;
   transition: background-color 250ms var(--primary-cubic);
 
   &--purple {
@@ -53,6 +54,7 @@
   font-size: 16px;
   line-height: 1.31;
 
+  cursor: pointer;
   transition: background-color 250ms var(--primary-cubic);
 
   &--light {
@@ -97,6 +99,7 @@
   border-radius: 50%;
   background-color: var(--primary-light-color);
 
+  cursor: pointer;
   transition: background-color 250ms var(--primary-cubic);
 
   &--small {
