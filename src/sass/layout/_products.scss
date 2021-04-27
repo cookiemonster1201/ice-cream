@@ -83,7 +83,7 @@
     margin-bottom: 20px;
   }
 
-@media screen and (min-width: $desktop-media) {
+  @media screen and (min-width: $desktop-media) {
     padding-top: 210px;
     flex-basis: calc(100% / 3 - 24px);
     margin-right: 24px;
@@ -94,6 +94,18 @@
 .products__item:not(:last-child) {
   @media screen and (max-width: 767px) {
     margin-bottom: 18px;
+  }
+}
+
+.products__wrapper {
+  width: 100%;
+  height: 100%;
+  transition: transform 250ms var(--primary-cubic);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    transition: transform 250ms var(--primary-cubic);
   }
 }
 
@@ -128,6 +140,11 @@
   transform-style: preserve-3d;
   min-height: 486px;
   width: 100%;
+  
+  &:hover .product__front-side {
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    transition: box-shadow 250ms var(--primary-cubic);
+  }
 
   @media screen and (min-width: $desktop-media) {
     min-height: 525px;
@@ -174,7 +191,6 @@
       background-image: url("/images/products/mobile/mobile-product-1@2x.png");
     }
 
-
   @media screen and (min-width: $tablet-media) {
     background-image: url("/images/products/tablet/tablet-product-1.png");
     @media screen and (min-device-pixel-ratio: 2),
@@ -193,7 +209,6 @@
       }
   }
 }
-
 
 .product--theme-two::before {
   background-image: url("/images/products/mobile/mobile-product-2.png");
@@ -230,7 +245,6 @@
       background-image: url("/images/products/mobile/mobile-product-3@2x.png");
     }
 
-
   @media screen and (min-width: $tablet-media) {
     background-image: url("/images/products/tablet/tablet-product-3.png");
     @media screen and (min-device-pixel-ratio: 2),
@@ -260,14 +274,16 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   overflow: hidden;
   border-radius: 24px;
 }
 
-.product__front-side {
+.product__front-side { 
   padding: 160px 40px 40px;
   padding-top: 160px;
   background-color: var(--bg-hero);
+  transition: box-shadow 250ms var(--primary-cubic);
 
   &--theme-two{
     background-color: #F0D1A5;;
@@ -290,9 +306,13 @@
   padding: 40px;
   transform: rotateY(180deg);
   background-color: var(--primary-light-color);
-  box-shadow: -15px -15px 152px -52px rgb(235, 108, 137) inset;
+  transition: box-shadow 250ms var(--primary-cubic);
 
-  &--theme-two{
+  &--theme-one {
+    box-shadow: -15px -15px 152px -52px rgb(235, 108, 137) inset;
+  }
+
+  &--theme-two {
     box-shadow: -15px -15px 152px -52px rgb(196, 117, 6) inset;
   }
 
@@ -307,6 +327,24 @@
   @media screen and (min-width: $desktop-media) {
     padding: 50px 44px;
   }
+}
+
+.product:hover .product__back-side--theme-one {
+  box-shadow: -15px -15px 152px -52px rgb(235, 108, 137) inset,
+  4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  transition: box-shadow 250ms var(--primary-cubic);
+}
+
+.product:hover .product__back-side--theme-two {
+  box-shadow: -15px -15px 152px -52px rgb(196, 117, 6) inset,
+  4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  transition: box-shadow 250ms var(--primary-cubic);
+}
+
+.product:hover .product__back-side--theme-three {
+  box-shadow: -15px -15px 152px -52px rgb(128, 170, 73) inset,
+  4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  transition: box-shadow 250ms var(--primary-cubic);
 }
 
 .flipped-forth {
@@ -324,7 +362,7 @@
 }
 
 .product__name {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   font-family: var(--title-font-family);
   font-weight: 400;
   font-size: 20px;
@@ -334,29 +372,32 @@
   text-transform: uppercase;
   color: var(--primary-light-color);
 
+  .products__wrapper:hover &,
+  .products__wrapper:focus & {
+    animation-name: headShake;
+    animation-duration: 900ms;
+  }
+
   @media screen and (max-width: 319px) {
     font-size: 6vw;
   }
 
   @media screen and (min-width: $desktop-media) {
-    margin-bottom: 32px;
+    margin-bottom: 26px;
     font-size: 30px;
     line-height: 1.13;
   }
 }
 
 .product__name::after {
-  content: "";
+  content: "...";
   display: block;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 26px;
-  height: 6px;
-  background-image: url("/images/icon/dots-icon.svg");
 
   @media screen and (min-width: $desktop-media) {
-    margin-top: 32px;
+    margin-top: 22px;
   }
 }
 
@@ -368,6 +409,12 @@
   text-align: center;
   letter-spacing: 0.04em;
   color: var(--primary-light-color);
+
+  .products__wrapper:hover &,
+  .products__wrapper:focus & {
+    animation-name: headShake;
+    animation-duration: 900ms;
+  }
 
   @media screen and (max-width: 319px) {
     font-size: 5vw;
@@ -426,6 +473,8 @@
 }
 
 @-webkit-keyframes pulse{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}50%{-webkit-transform:scale3d(1.05,1.05,1.05);transform:scale3d(1.05,1.05,1.05)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}@keyframes pulse{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}50%{-webkit-transform:scale3d(1.05,1.05,1.05);transform:scale3d(1.05,1.05,1.05)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}.animate__pulse{-webkit-animation-name:pulse;animation-name:pulse;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}
+
+@-webkit-keyframes headShake{0%{-webkit-transform:translateX(0);transform:translateX(0)}6.5%{-webkit-transform:translateX(-6px) rotateY(-9deg);transform:translateX(-6px) rotateY(-9deg)}18.5%{-webkit-transform:translateX(5px) rotateY(7deg);transform:translateX(5px) rotateY(7deg)}31.5%{-webkit-transform:translateX(-3px) rotateY(-5deg);transform:translateX(-3px) rotateY(-5deg)}43.5%{-webkit-transform:translateX(2px) rotateY(3deg);transform:translateX(2px) rotateY(3deg)}50%{-webkit-transform:translateX(0);transform:translateX(0)}}@keyframes headShake{0%{-webkit-transform:translateX(0);transform:translateX(0)}6.5%{-webkit-transform:translateX(-6px) rotateY(-9deg);transform:translateX(-6px) rotateY(-9deg)}18.5%{-webkit-transform:translateX(5px) rotateY(7deg);transform:translateX(5px) rotateY(7deg)}31.5%{-webkit-transform:translateX(-3px) rotateY(-5deg);transform:translateX(-3px) rotateY(-5deg)}43.5%{-webkit-transform:translateX(2px) rotateY(3deg);transform:translateX(2px) rotateY(3deg)}50%{-webkit-transform:translateX(0);transform:translateX(0)}}.animate__headShake{-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-name:headShake;animation-name:headShake}
 
 .products__item.on-screen {
   animation-name: pulse;
