@@ -102,7 +102,8 @@
   height: 100%;
   transition: transform 250ms var(--primary-cubic);
 
-  &:hover {
+  &:hover,
+  &:focus {
     transform: scale(1.1);
     transition: transform 250ms var(--primary-cubic);
   }
@@ -273,6 +274,7 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   overflow: hidden;
   border-radius: 24px;
 }
@@ -360,7 +362,7 @@
 }
 
 .product__name {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   font-family: var(--title-font-family);
   font-weight: 400;
   font-size: 20px;
@@ -370,7 +372,8 @@
   text-transform: uppercase;
   color: var(--primary-light-color);
 
-  .products__wrapper:hover & {
+  .products__wrapper:hover &,
+  .products__wrapper:focus & {
     animation-name: headShake;
     animation-duration: 900ms;
   }
@@ -380,24 +383,21 @@
   }
 
   @media screen and (min-width: $desktop-media) {
-    margin-bottom: 32px;
+    margin-bottom: 26px;
     font-size: 30px;
     line-height: 1.13;
   }
 }
 
 .product__name::after {
-  content: "";
+  content: "...";
   display: block;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 26px;
-  height: 6px;
-  background-image: url("/images/icon/dots-icon.svg");
 
   @media screen and (min-width: $desktop-media) {
-    margin-top: 32px;
+    margin-top: 22px;
   }
 }
 
@@ -410,7 +410,8 @@
   letter-spacing: 0.04em;
   color: var(--primary-light-color);
 
-  .products__wrapper:hover & {
+  .products__wrapper:hover &,
+  .products__wrapper:focus & {
     animation-name: headShake;
     animation-duration: 900ms;
   }
