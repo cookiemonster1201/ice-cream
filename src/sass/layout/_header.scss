@@ -26,6 +26,13 @@
   border: none;
   background-color: transparent;
   padding: 0;
+  transform: translateY(0) rotate(0deg);
+
+  transition: transform 400ms var(--primary-cubic);
+}
+
+.menu-btn.is-active {
+  transform: translateY(-500%) rotate(360deg);
 }
 
 .menu-btn__icon {
