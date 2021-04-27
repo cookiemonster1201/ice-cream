@@ -18,19 +18,17 @@
   margin: 0 auto;
   text-align: center;
   background: var(--bg-pink-theme);
+  background-size: contain;
+  background-repeat: no-repeat;
 
   @media screen and (max-width: $tablet-media - 1) {
     background-image: url('../images/about/mobile/mobile-bg-about.png');
-    background-repeat: no-repeat;
     background-position-y: 89%;
-    background-size: contain;
   }
 
   @media screen and (min-width: $desktop-media) {
     background-image: url('../images/about/desktop/desktop-bg-about.png');
-    background-repeat: no-repeat;
     background-position-y: 150%;
-    background-size: contain;
   }
 }
 
