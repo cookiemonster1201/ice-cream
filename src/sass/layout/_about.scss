@@ -1,14 +1,14 @@
 .section {
-  padding-top: 63px;
+  padding-top: 125px;
   padding-bottom: 20px;
 
   @media screen and (min-width: $tablet-media) {
-    padding-top: 65px;
+    padding-top: 130px;
     padding-bottom: 33px;
   }
 
   @media screen and (min-width: $desktop-media) {
-    padding-top: 63px;
+    padding-top: 125px;
     padding-bottom: 73px;
   }
 }
@@ -34,6 +34,25 @@
 
 .about__suptitle {
   margin-bottom: 15px;
+}
+
+.on-screen {
+  animation-name: title-pulse;
+  animation-duration: 1200ms;
+}
+
+@keyframes title-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .about__wrapper {
