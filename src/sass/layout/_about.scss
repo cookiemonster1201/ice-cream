@@ -36,6 +36,19 @@
   margin-bottom: 15px;
 }
 
+// .about__title {
+//   animation: rotateX 1200ms infinite alternate ease-in-out 1000ms;
+//   @keyframes rotateX {
+//     0% {
+//       transform: rotateX(0deg);
+//     }
+
+//     100% {
+//       transform: rotateX(60deg);
+//     }
+//   }
+// }
+
 .about__wrapper {
   @media screen and (min-width: $tablet-media) {
     display: flex;
