@@ -1,8 +1,48 @@
+.scrollup {
+  position: fixed;
+  right: 15px;
+  bottom: 25px;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+
+  transform: translateX(200%);
+}
+
+.scrollup-show {
+  transform: translateX(0%);
+  transition: transform 500ms var(--primary-cubic);
+}
+
+.scrollup-hidden {
+  transform: translateX(200%);
+  transition: transform 500ms var(--primary-cubic);
+}
+
+.scrollup-icon {
+  fill: var(--primary-light-color);
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  z-index: 500;
+
+  transition: background-color 250ms var(--primary-cubic), fill 250ms var(--primary-cubic);
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary-light-color);
+    fill: var(--accent-color);
+    border: 4px solid var(--accent-color);
+    cursor: pointer;
+  }
+}
+
 .header {
   position: absolute;
   width: 100%;
   z-index: 100;
-  //   background-color можна буде видалити при зшиванні проекту
   background: transparent;
 }
 
@@ -109,6 +149,8 @@
   padding-bottom: 13px;
   border-top: 1px solid #e18298;
 
+  animation: menu-link 500ms forwards;
+
   &:last-child {
     border-bottom: 1px solid #e18298;
   }
@@ -178,6 +220,16 @@
   .mobile-menu__item {
     padding-left: 33px;
   }
+
+  .scrollup {
+    right: 20px;
+    bottom: 30px;
+  }
+
+  .scrollup-icon {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media screen and (min-width: $desktop-media) {
@@ -193,6 +245,11 @@
   .logo {
     position: absolute;
     transform: translateX(-70px);
+  }
+
+  .animate__wobble:hover,
+  .animate__wobble:focus {
+    animation-name: animate__wobble;
   }
 
   .menu {
@@ -229,5 +286,15 @@
   .modal-btn {
     align-items: center;
     margin-left: auto;
+  }
+
+  .scrollup {
+    right: 30px;
+    bottom: 45px;
+  }
+
+  .scrollup-icon {
+    width: 70px;
+    height: 70px;
   }
 }

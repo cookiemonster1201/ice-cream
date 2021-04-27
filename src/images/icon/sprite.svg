@@ -59,5 +59,10 @@
 <symbol id="icon-btn-arrow" viewBox="0 0 19 32">
 <path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="6.4" d="M3.2 3.2l12.8 12.8-12.8 12.8"></path>
 </symbol>
+
+<symbol id="icon-circle-up" viewBox="0 0 32 32">
+<path d="M22.086 20.914l2.829-2.829-8.914-8.914-8.914 8.914 2.828 2.828 6.086-6.086z"></path>
+</symbol>
+
 </defs>
 </svg>
