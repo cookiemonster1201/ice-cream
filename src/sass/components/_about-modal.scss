@@ -4,11 +4,14 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: var(--backdrop-overlay);
   transition: visibility 250ms var(--primary-cubic), opacity 250ms var(--primary-cubic),
     pointer-events 250ms var(--primary-cubic);
   opacity: 1;
   z-index: 100;
+  overflow-y: scroll;
 }
 
 .is-hidden {
@@ -18,8 +21,7 @@
 }
 
 .modal-about {
-  position: absolute;
-  top: 50%;
+  position: relative;
   left: 50%;
   max-height: 640px;
   background-color: var(--bg-pink-theme);
@@ -28,7 +30,7 @@
   border-radius: 10px;
   padding: 40px;
 
-  transform: translate(-50%, -50%) rotate(360deg) scale(1);
+  transform: translate(-50%, 0) rotate(360deg) scale(1);
   transition: transform 250ms var(--primary-cubic);
 
   .about-backdrop.is-hidden & {
@@ -121,5 +123,13 @@
 
   @media screen and (min-width: $desktop-media) {
     font-size: 16px;
+  }
+}
+
+@media screen and (min-height: 560px) {
+  .modal-about {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
   }
 }
