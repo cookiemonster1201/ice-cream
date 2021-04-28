@@ -43,14 +43,12 @@
 }
 
 .modal-close__btn-icon {
-  width: 14px;
-  height: 14px;
   fill: var(--secondary-color);
-  transition: fill var(--primary-cubic);
+  transition: fill 250ms var(--primary-cubic);
 
-  &:hover,
-  &:focus {
-    fill: var(--secondary-accent-color);
+  .modal__close-btn:hover &,
+  .modal__close-btn:focus & {
+    fill: var(--accent-color);
   }
 }
 
