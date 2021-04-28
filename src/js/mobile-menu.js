@@ -12,18 +12,20 @@
   });
 })();
 
-/*СКРИПТ ДЛЯ СКРЫТИЯ БУРГЕР-МЕНЮ ПРИ ОТКРЫТИИ МОБ.МЕНЮ И 
+/*СКРИПТ ДЛЯ СКРЫТИЯ БУРГЕР-МЕНЮ И МОДАЛЬНОЙ КНОПКИ ПРИ ОТКРЫТИИ МОБ.МЕНЮ И 
 ДЛЯ ЗАКРЫТИЯ МОБ. МЕНЮ ПОСЛЕ КЛИКА ПО ССЫЛКЕ */
 (() => {
-  const menuBtnRef = document.querySelector('[data-menu-btn]');
-  const mobileMenuClose = document.querySelector('[data-menu-close]');
+  const menuBtnRef = document.querySelector("[data-menu-btn]");
+  const mobileMenuClose = document.querySelector("[data-menu-close]");
+  const modalBtnRef = document.querySelector("[data-modal-btn]");
 
-  menuBtnRef.addEventListener('click', () => {
-    menuBtnRef.classList.toggle('is-active');
+  menuBtnRef.addEventListener("click", () => {
+    menuBtnRef.classList.toggle("is-active");
+    modalBtnRef.classList.toggle("is-visibility");
   });
 
-  mobileMenuClose.addEventListener('click', () => {
-    menuBtnRef.classList.toggle('is-active');
-    // mobileMenuClose.classList.toggle('is-close');
+  mobileMenuClose.addEventListener("click", () => {
+    menuBtnRef.classList.toggle("is-active");
+    modalBtnRef.classList.toggle("is-visibility");
   });
 })();
