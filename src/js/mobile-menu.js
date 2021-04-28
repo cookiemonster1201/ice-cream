@@ -22,11 +22,11 @@
   menuBtnRef.addEventListener('click', () => {
     menuBtnRef.classList.toggle('is-active');
     modalBtnRef.classList.toggle('is-visibility');
+    document.body.classList.toggle('modal-open');
   });
 
   mobileMenuClose.addEventListener('click', () => {
     menuBtnRef.classList.toggle('is-active');
     modalBtnRef.classList.toggle('is-visibility');
-    document.body.classList.toggle('modal-open');
   });
 })();
