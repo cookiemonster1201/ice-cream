@@ -102,10 +102,6 @@
   transform: translateX(0%) scale(1);
 }
 
-// .is-close {
-//   transform: translateX(100%) scale(0);
-// }
-
 .mobile-menu__close-btn {
   position: absolute;
   top: 23px;
@@ -200,12 +196,35 @@
     cursor: pointer;
     border: none;
     background-color: var(--primary-light-color);
-    transition: background-color 250ms var(--primary-cubic);
+
+    transform: translateX(0%);
+    transition: background-color 250ms var(--primary-cubic), transform 250ms var(--primary-cubic),
+      animation 250ms var(--primary-cubic);
 
     &:hover,
     &:focus {
       background-color: var(--button-hover-light);
     }
+  }
+
+  @keyframes modal-btn-opacity {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .is-visibility {
+    transform: translateX(200%);
+
+    animation-name: modal-btn-opacity;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
   }
 
   .mobile-menu {
