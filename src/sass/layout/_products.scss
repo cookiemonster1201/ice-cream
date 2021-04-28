@@ -140,11 +140,6 @@
   transform-style: preserve-3d;
   min-height: 486px;
   width: 100%;
-  
-  &:hover .product__front-side {
-    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    transition: box-shadow 250ms var(--primary-cubic);
-  }
 
   @media screen and (min-width: $desktop-media) {
     min-height: 525px;
@@ -284,6 +279,12 @@
   padding-top: 160px;
   background-color: var(--bg-hero);
   transition: box-shadow 250ms var(--primary-cubic);
+    
+  .products__wrapper:hover &,
+  .products__wrapper:focus & {
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    transition: box-shadow 250ms var(--primary-cubic);
+  }
 
   &--theme-two{
     background-color: #F0D1A5;;
