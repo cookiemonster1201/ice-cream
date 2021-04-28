@@ -1,11 +1,8 @@
 .modal {
-  position: absolute;
-  top: 50%;
+  position: relative;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(360deg) scale(1);
+  transform: translate(-50%, 0) rotate(360deg) scale(1);
   width: 95%;
-  height: 100vh;
-  max-height: 581px;
   border-radius: 10px;
   background-color: var(--bg-pink-theme);
   padding: 55px 40px;
@@ -56,6 +53,15 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+@media screen and (min-height: 600px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+  }
 }
 
 @media screen and (max-width: 767px) {
