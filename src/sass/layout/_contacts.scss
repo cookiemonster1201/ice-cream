@@ -1,5 +1,5 @@
-@media screen and (min-width: $mobile-media) {
-  .container {
+
+.container {
     width: var(--mobile-width-container);
   }
   .contacts {
@@ -72,6 +72,9 @@
       font-size: 12px;
       line-height: 1.5;
       color: var(--primary-dark-color);
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
     &__schedule-hour {
       display: block;
@@ -98,7 +101,6 @@
       margin-bottom: 10px;
     }
   }
-}
 
 @media screen and (min-width: $tablet-media) {
   .container {
@@ -143,6 +145,9 @@
     &__schedule-hour {
       font-size: 14px;
       line-height: 1.86;
+    }
+    &__schedule-day:not(:last-child) {
+      margin-bottom: 15px;
     }
   }
   .contacts-link-list {
