@@ -15,7 +15,8 @@ body {
 
   overflow-y: scroll;
   opacity: 1;
-  transition: opacity 250ms var(--primary-cubic);
+  transition: visibility 250ms var(--primary-cubic), opacity 250ms var(--primary-cubic),
+    pointer-events 250ms var(--primary-cubic);
 
   &.is-hidden {
     opacity: 0;
@@ -33,11 +34,10 @@ body {
   background-color: var(--bg-pink-theme);
 
   transform: translate(0, 0) rotate(360deg) scale(1);
-  transition: transform 500ms var(--primary-cubic);
+  transition: transform 250ms var(--primary-cubic);
 
   .location-backdrop.is-hidden & {
     transform: translate(200%, -50%) rotate(180deg) scale(0);
-    transition: transform 250ms var(--primary-cubic);
   }
 }
 
